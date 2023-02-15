@@ -1,2 +1,2 @@
-# react-academind
-React projects from Udemy course by Academind
+# react-udemy
+React projects from Udemy courses
