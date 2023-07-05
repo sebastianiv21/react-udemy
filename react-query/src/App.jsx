@@ -1,7 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { useState } from 'react'
 import './App.css'
-import { useQuery, useQueryClient } from '@tanstack/react-query'
 
 const getRandomNumber = async () => {
   const res = await fetch(
@@ -25,8 +24,10 @@ function App() {
         query.error.message // error message
       ) : (
         <div>
-          <h1>{query.data}</h1> // query data
-          <button onClick={() => query.refetch()} disabled={query.isFetching}> // disable button while fetching
+          {/* query data */}
+          <h1>{query.data}</h1>
+          {/* disable button while fetching */}
+          <button onClick={() => query.refetch()} disabled={query.isFetching}>
             Refetch
           </button>
         </div>
